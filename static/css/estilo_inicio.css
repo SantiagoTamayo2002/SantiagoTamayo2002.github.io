@@ -1,0 +1,277 @@
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: #222223;
+}
+
+.nav{
+    width: 100%;
+    height: 70px;
+    background-color: #78172a;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+
+}
+
+.nav ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.nav ul li a{
+    text-decoration: none;
+    color: #fafafa;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav ul li a:hover{
+    background-color: #fafafa;
+    color: #101010;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.imagen{
+    height: 300px;
+    width: 300px;
+    position: relative;
+    contain: content;
+    border-radius: 100%;
+    filter: drop-shadow(0 0 0.75rem crimson);
+}
+
+.imagen img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.texto{
+    display: inline-block;
+    width: 500px;
+    margin-left: 50px;
+    color: #fafafa;
+}
+
+.texto h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.texto p{
+    font-size: 18px;
+}
+
+.texto p strong{
+    font-weight: 600;
+}
+
+.texto i{
+    font-size: 40px;
+    margin: 10px;
+    right: 0;
+    bottom: 0;
+    color: #fafafa;
+}
+
+.texto h1{
+    margin-bottom: 10px;
+}
+.texto a i{
+    color: #78172a;
+}
+
+.git{
+    text-align: end;
+}
+
+.habilidades{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #191919;
+    color: #fafafa;
+    padding-top: 20px;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/*carrusel para las tecnologias que domino*/
+.contenedor-padre{
+    display: flex;
+    padding: 0 35px;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    background: #191919;
+    margin-top: 30px;
+  }
+  .wrapper {
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+  }
+  .wrapper i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+    z-index: 40;
+  }
+  .wrapper i:active{
+    transform: translateY(-50%) scale(0.85);
+  }
+  .wrapper i:first-child{
+    left: -30px;
+  }
+  .wrapper i:last-child{
+    right: -35px;
+  }
+  .wrapper .carousel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 1px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 15px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    height: 340px;
+    width: 100%;
+    padding: 5px;
+  }
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel.no-transition {
+    scroll-behavior: auto;
+  }
+  .carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+  .carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+  }
+  .carousel :where(.card, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .carousel .card {
+    scroll-snap-align: start;
+    height: 300px;
+    list-style: none;
+    background: #222223;
+    filter: drop-shadow(0 0 0.75rem crimson);
+    cursor: pointer;
+    flex-direction: column;
+    border-radius: 25px;
+    margin: 20px 10px;
+  }
+  .carousel .card .img {
+    background:#fafafaFF;
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+  }
+  .card .img img {
+    width: 101%;
+    height: 101%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .carousel .card h2 {
+    font-weight: 500;
+    font-size: 2rem;
+    margin: 30px 0 5px;
+    color: #fafafa;
+  }
+  .carousel .card span {
+    color: #6A6D78;
+    font-size: 1.31rem;
+  }
+  @media screen and (max-width: 900px) {
+    .wrapper .carousel {
+      grid-auto-columns: calc((100% / 2) - 9px);
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .wrapper .carousel {
+      grid-auto-columns: 100%;
+    }
+ }
+
+ .redes{
+    text-align: center;
+ }
+
+ .redes ul li{
+    display: inline-block;
+ }
+ .redes ul li a{
+    list-style: none;
+    display: inline-block;
+    margin: 20px 70px;
+    font-size: 55px;
+    color: #78172a;
+ }
+
+ .redes ul li i:hover{
+    color: #FFF;
+    transition: all 0.3s ease;
+
+ }
+
+ .copyright p{
+    display: inline-block;
+    font-size: 20px;
+ }
+
+ .copyright{
+    text-align: center;
+    color: #fff;
+    margin: 20px;
+ }
+
+
